@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{7AA562E2-1F29-4CB5-BF9D-DC40C4CB0C26}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Plotter.co.za</RootNamespace>
+    <AssemblyName>Plotter.co.za</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Plotter.co.za.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Plotter.co.za.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="App_Themes\Plain\Default.css" />
+    <Content Include="App_Themes\Plain\Frame.css" />
+    <Content Include="App_Themes\Plain\Images\album-bstretch.gif" />
+    <Content Include="App_Themes\Plain\Images\album-l1.gif" />
+    <Content Include="App_Themes\Plain\Images\album-l2.gif" />
+    <Content Include="App_Themes\Plain\Images\album-l3.gif" />
+    <Content Include="App_Themes\Plain\Images\album-l4.gif" />
+    <Content Include="App_Themes\Plain\Images\album-lstretch.gif" />
+    <Content Include="App_Themes\Plain\Images\album-mbl.gif" />
+    <Content Include="App_Themes\Plain\Images\album-mbr.gif" />
+    <Content Include="App_Themes\Plain\Images\album-mtl.gif" />
+    <Content Include="App_Themes\Plain\Images\album-mtr.gif" />
+    <Content Include="App_Themes\Plain\Images\album-r1.gif" />
+    <Content Include="App_Themes\Plain\Images\album-r2.gif" />
+    <Content Include="App_Themes\Plain\Images\album-r3.gif" />
+    <Content Include="App_Themes\Plain\Images\album-r4.gif" />
+    <Content Include="App_Themes\Plain\Images\album-rstretch.gif" />
+    <Content Include="App_Themes\Plain\Images\album-tstretch.gif" />
+    <Content Include="App_Themes\Plain\Images\background.gif" />
+    <Content Include="App_Themes\Plain\Images\body-repeat-photo.gif" />
+    <Content Include="App_Themes\Plain\Images\body-repeat.gif" />
+    <Content Include="App_Themes\Plain\Images\bullet-1.gif" />
+    <Content Include="App_Themes\Plain\Images\bullet-2.gif" />
+    <Content Include="App_Themes\Plain\Images\button-add.gif" />
+    <Content Include="App_Themes\Plain\Images\button-cancel.gif" />
+    <Content Include="App_Themes\Plain\Images\button-create.gif" />
+    <Content Include="App_Themes\Plain\Images\button-delete.gif" />
+    <Content Include="App_Themes\Plain\Images\button-download.gif" />
+    <Content Include="App_Themes\Plain\Images\button-dwn_res.gif" />
+    <Content Include="App_Themes\Plain\Images\button-edit.gif" />
+    <Content Include="App_Themes\Plain\Images\button-first.gif" />
+    <Content Include="App_Themes\Plain\Images\button-gallery.gif" />
+    <Content Include="App_Themes\Plain\Images\button-import.gif" />
+    <Content Include="App_Themes\Plain\Images\button-insert.gif" />
+    <Content Include="App_Themes\Plain\Images\button-last.gif" />
+    <Content Include="App_Themes\Plain\Images\button-login.gif" />
+    <Content Include="App_Themes\Plain\Images\button-next.gif" />
+    <Content Include="App_Themes\Plain\Images\button-play.gif" />
+    <Content Include="App_Themes\Plain\Images\button-prev.gif" />
+    <Content Include="App_Themes\Plain\Images\button-rename.gif" />
+    <Content Include="App_Themes\Plain\Images\button-save.gif" />
+    <Content Include="App_Themes\Plain\Images\button-tog24.gif" />
+    <Content Include="App_Themes\Plain\Images\button-tog8.gif" />
+    <Content Include="App_Themes\Plain\Images\content-shim-none.gif" />
+    <Content Include="App_Themes\Plain\Images\content-shim-photo.gif" />
+    <Content Include="App_Themes\Plain\Images\content-shim-stretch.gif" />
+    <Content Include="App_Themes\Plain\Images\content-shim.gif" />
+    <Content Include="App_Themes\Plain\Images\footer-side.gif" />
+    <Content Include="App_Themes\Plain\Images\footer.gif" />
+    <Content Include="App_Themes\Plain\Images\frame-bot--x.gif" />
+    <Content Include="App_Themes\Plain\Images\frame-bot-x-.gif" />
+    <Content Include="App_Themes\Plain\Images\frame-botx--.gif" />
+    <Content Include="App_Themes\Plain\Images\frame-mid--x.gif" />
+    <Content Include="App_Themes\Plain\Images\frame-midx--.gif" />
+    <Content Include="App_Themes\Plain\Images\frame-top--x.gif" />
+    <Content Include="App_Themes\Plain\Images\frame-top-x-.gif" />
+    <Content Include="App_Themes\Plain\Images\frame-topx--.gif" />
+    <Content Include="App_Themes\Plain\Images\header.gif" />
+    <Content Include="App_Themes\Plain\Images\photonav-bg.gif" />
+    <Content Include="App_Themes\Plain\Images\photonav-top-bg.gif" />
+    <Content Include="App_Themes\Plain\Images\spacer.gif" />
+    <Content Include="bbm.aspx" />
+    <Content Include="bin\RadiusClass.dll" />
+    <Content Include="bin\RadiusClass.pdb" />
+    <Content Include="bin\ZedGraph.dll" />
+    <Content Include="bin\ZedGraph.Web.dll" />
+    <Content Include="cnruninstall.ico" />
+    <Content Include="Coverage.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Details.aspx" />
+    <Content Include="DrawPlot.aspx" />
+    <Content Include="googlegraph.ascx" />
+    <Content Include="graph.aspx" />
+    <Content Include="gScript.js" />
+    <Content Include="images\cnruninstall.ico" />
+    <Content Include="images\marker_v.png" />
+    <Content Include="images\placeholder-100.jpg" />
+    <Content Include="images\placeholder-200.jpg" />
+    <Content Include="images\placeholder-600.jpg" />
+    <Content Include="images\red_MarkerA.png" />
+    <Content Include="images\red_MarkerB.png" />
+    <Content Include="images\red_MarkerC.png" />
+    <Content Include="images\red_MarkerV.png" />
+    <Content Include="images\resume-photo.jpg" />
+    <Content Include="images\Vlocity-Pty-Ltd-Size 1.png" />
+    <Content Include="Lookup.aspx" />
+    <Content Include="Maps.aspx" />
+    <Content Include="plotit.aspx" />
+    <Content Include="Plotter.aspx" />
+    <Content Include="PlotterWEBSITE.sln" />
+    <Content Include="Plotting.ascx" />
+    <Content Include="Points.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Scripts\bluff-min.js" />
+    <Content Include="Scripts\bluff-src.js" />
+    <Content Include="Scripts\Coverage.js" />
+    <Content Include="Scripts\CoverageScript.js" />
+    <Content Include="Scripts\excanvas.js" />
+    <Content Include="Scripts\js-class.js" />
+    <Content Include="Scripts\PointScript.js" />
+    <Content Include="ShowMap.aspx" />
+    <Content Include="ShowPoint.aspx" />
+    <Content Include="Simple.aspx" />
+    <Content Include="Simple1.aspx" />
+    <Content Include="Simple2.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="test.css" />
+    <Content Include="TestMASS.aspx" />
+    <Content Include="TestPost.aspx" />
+    <Content Include="Towers.aspx" />
+    <Content Include="UpgradeLog.XML" />
+    <Content Include="UpgradeLog2.XML" />
+    <Content Include="Users.aspx" />
+    <Content Include="Welcome.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.vb">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.vb">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Content Include="App_Code\DataClass.vb" />
+    <Content Include="App_Code\GeoCalculator.vb" />
+    <Compile Include="bbm.aspx.vb">
+      <DependentUpon>bbm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Coverage.aspx.vb">
+      <DependentUpon>Coverage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.master.vb">
+      <DependentUpon>Default.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.vb">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrawPlot.aspx.vb">
+      <DependentUpon>DrawPlot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="googlegraph.ascx.vb">
+      <DependentUpon>googlegraph.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="graph.aspx.vb">
+      <DependentUpon>graph.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lookup.aspx.vb">
+      <DependentUpon>Lookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maps.aspx.vb">
+      <DependentUpon>Maps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="plotit.aspx.vb">
+      <DependentUpon>plotit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plotter.aspx.vb">
+      <DependentUpon>Plotter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plotting.ascx.vb">
+      <DependentUpon>Plotting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Points.aspx.vb">
+      <DependentUpon>Points.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowMap.aspx.vb">
+      <DependentUpon>ShowMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowPoint.aspx.vb">
+      <DependentUpon>ShowPoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simple.aspx.vb">
+      <DependentUpon>Simple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simple1.aspx.vb">
+      <DependentUpon>Simple1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Simple2.aspx.vb">
+      <DependentUpon>Simple2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestMASS.aspx.vb">
+      <DependentUpon>TestMASS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPost.aspx.vb">
+      <DependentUpon>TestPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Towers.aspx.vb">
+      <DependentUpon>Towers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.vb">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="App_Themes\Plain\Default.skin" />
+    <None Include="bin\ZedGraph.dll.refresh" />
+    <None Include="bin\ZedGraph.Web.dll.refresh" />
+    <Content Include="Default.master" />
+    <None Include="images\Thumbs.db" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <None Include="PlotterWEBSITE.userprefs" />
+    <None Include="PostTest2.aspx.cs.exclude" />
+    <None Include="PostTest2.aspx.exclude" />
+    <Content Include="web.config" />
+    <Content Include="web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="ZedGraphImages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50487</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

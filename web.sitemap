@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+  
+	<siteMapNode title="Home" url="Default.aspx">
+    <siteMapNode title="Submit LOS" url="Request/LOS.aspx" />
+    <siteMapNode title="Advanced (Maps)" url="Maps.aspx" />
+		<siteMapNode title="Register" url="Register.aspx" />
+    <siteMapNode title="Our Coverage" url="Coverage.aspx?ViewRegion=GAU" />
+	</siteMapNode>
+</siteMap>

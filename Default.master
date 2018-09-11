@@ -1,0 +1,96 @@
+<%@ Master Language="VB" CodeFile="Default.master.vb" Inherits="Default_master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head runat="server">
+	<title>Plotter</title>
+
+    <style type="text/css">
+        .style1
+        {
+            color: #FF0000;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+        <div class="header">
+            <asp:menu id="menua" runat="server" 
+                datasourceid="SiteMapDataSource1" 
+                cssclass="menua" 
+                orientation="Horizontal" 
+                maximumdynamicdisplaylevels="0" 
+                skiplinktext="" 
+                staticdisplaylevels="2" />
+            <div class="nav">
+                <asp:LoginView ID="LoginView1" runat="server">
+                
+                <RoleGroups>
+                    <asp:RoleGroup Roles="super">
+                        <ContentTemplate>
+                            <asp:LoginName runat="server" />
+                            &nbsp;
+                            <a href="Towers.aspx">Towers</a>
+                            &nbsp;
+                            <a href="Users.aspx">Users</a>
+                            &nbsp;
+                            <asp:LoginStatus ID="LoginStatus1" Runat="server" 
+                                onloggingout="LoginStatus1_LoggingOut" /> 
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                    <asp:RoleGroup Roles="admin">
+                        <ContentTemplate>
+                            <asp:LoginName ID="LoginName1" runat="server" />
+                            &nbsp;
+                            <a href="Towers.aspx">Towers</a>
+                            &nbsp;
+                            <asp:LoginStatus ID="LoginStatus1" Runat="server" /> 
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                    <asp:RoleGroup Roles="staff">
+                        <ContentTemplate>
+                            <asp:LoginName ID="LoginName1" runat="server" />
+                            &nbsp;
+                            <asp:LoginStatus ID="LoginStatus1" Runat="server" /> 
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                    <asp:RoleGroup Roles="user">
+                        <ContentTemplate>
+                            <asp:LoginName ID="LoginName2" runat="server" />[Client]
+                            <asp:LoginStatus ID="LoginStatus1" Runat="server" /> 
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                </RoleGroups>                
+                <LoggedInTemplate>                
+                    <asp:LoginStatus ID="LoginStatus1" Runat="server" />            
+                </LoggedInTemplate>
+                <AnonymousTemplate>
+                    <asp:LoginStatus ID="LoginStatus1" Runat="server" />            
+                </AnonymousTemplate>
+                </asp:LoginView>
+            </div>
+            <asp:Image ID="Image1" runat="server" style="position:absolute; top: 7px; left: 39px;"
+                ImageUrl="~/images/Vlocity-Pty-Ltd-Size 1.png" Width="124px" />
+        </div>
+
+        <asp:contentplaceholder id="Main" runat="server" />
+
+            <div class="footer">
+                <span class="style1">
+                <br />
+                <br />
+                <br />
+                Copyright &copy; 2012 Vlocity Communications (Pty) Ltd. </span>
+            </div>
+
+        <asp:sitemapdatasource id="SiteMapDataSource1" runat="server" startingnodeoffset="0" />
+    
+    </form>
+    
+</body>
+</html>

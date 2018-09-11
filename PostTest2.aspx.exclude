@@ -1,0 +1,13 @@
+<%@ Page Language="C#" MasterPageFile="~/Default.master" AutoEventWireup="true" CodeFile="PostTest2.aspx.cs" Inherits="PostTest2" Title="Untitled Page" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Main" Runat="Server">
+        field1 : <asp:TextBox runat="Server" id="text1"/>
+        <br/>
+        field2 : <asp:TextBox runat="Server" id="text2"/>
+        <br/>
+        <asp:button ID="Button1" runat="Server" onclick="PostMe" Text="Post"/>
+
+        
+        <asp:Literal runat="Server" id="ResponseResult" />
+        
+</asp:Content>
+

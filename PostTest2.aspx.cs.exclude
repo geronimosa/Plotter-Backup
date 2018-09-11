@@ -1,0 +1,57 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Text;
+using System.IO;
+
+public partial class PostTest2 : System.Web.UI.Page
+{
+    protected void PostMe(object sender, EventArgs e)
+    {
+        string poststring = String.Format("tiusername={0}&tipassword={1}", text1.Text, text2.Text);
+        ResponseResult.Text = "<hr/>" +
+        GetResponseString("https://secure.telkomsa.net/titracker/servlet/LoginServlet", poststring);
+    }
+
+    String GetResponseString(string url, string poststring)
+    {
+        System.Net.HttpWebRequest httpRequest =
+        (HttpWebRequest)WebRequest.Create("https://secure.telkomsa.net/titracker/servlet/LoginServlet");
+
+        httpRequest.Method = "POST";
+        httpRequest.ContentType = "application/x-www-form-urlencoded";
+
+        byte[] bytedata = Encoding.UTF8.GetBytes(poststring);
+        httpRequest.ContentLength = bytedata.Length;
+
+        Stream requestStream = httpRequest.GetRequestStream();
+        requestStream.Write(bytedata, 0, bytedata.Length);
+        requestStream.Close();
+
+
+        System.Net.HttpWebResponse httpWebResponse =
+        (HttpWebResponse)httpRequest.GetResponse();
+        Stream responseStream = httpWebResponse.GetResponseStream();
+
+        StringBuilder sb = new StringBuilder();
+
+        using (StreamReader reader =
+        new StreamReader(responseStream, System.Text.Encoding.UTF8))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                sb.Append(line);
+            }
+        }
+
+        return sb.ToString();
+    }
+}
